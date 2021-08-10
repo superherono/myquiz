@@ -46,12 +46,12 @@ function sliders_bild_callback(params) {}
 
 let sliderQuiz = new Swiper('.page__quiz', {
 	// onlyExternal: true,
-	// pagination : false, 
+	pagination : false, 
 	// simulateTouch : false, 
 	// allowSwipeToNext: false, 
 	// allowSwipeToPrev: false,
 	// preventInteractionOnTransition: true,
-	// allowTouchMove: false,
+	allowTouchMove: false,
 
 	// observer: true,
 	// observeParents: true,

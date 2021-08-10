@@ -45,39 +45,20 @@ if (sliders) {
 function sliders_bild_callback(params) {}
 
 let sliderQuiz = new Swiper('.page__quiz', {
-	observer: true,
-	observeParents: true,
-	direction: 'vertical',
-	effect: 'slide',
-	onlyExternal: true,
-	pagination : false, 
-	simulateTouch : false, 
-	allowSwipeToNext: false, 
-	allowSwipeToPrev: false,
-	preventInteractionOnTransition: true,
-	allowTouchMove: false,
-	reverseDirection: true,
-	speed: 500,
-			// freeMode: true,
+	// onlyExternal: true,
+	// pagination : false, 
+	// simulateTouch : false, 
+	// allowSwipeToNext: false, 
+	// allowSwipeToPrev: false,
+	// preventInteractionOnTransition: true,
+	// allowTouchMove: false,
 
-	// // observer: true,
-	// // observeParents: true,
+	// observer: true,
+	// observeParents: true,
 	slidesPerView: 1,
 	// // spaceBetween: 80,
-	// // // autoHeight: true,
 	// // speed: 800,
 	// // touchRatio: 0,
-	// direction: 'vertical',
-	// // freeMode: true,
-	// //loop: true,
-	// //preloadImages: false,
-	// // lazy: true,
-	// // effect:"cube",
-	// // cubeEffect: {
-	// // 	// shadow: true,
-	// // 	shadowOffset: 20,
-	// // 	shadowScale: 0.94,
-	//   },
 	on: {
 		lazyImageReady: function () {
 			ibg();

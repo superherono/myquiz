@@ -400,14 +400,6 @@ body.ie ._ibg img {
   display: none !important;
 }
 
-.swiper-slide {
-  opacity: 0;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-}
-
 ._tabs-block {
   display: none;
 }
@@ -569,8 +561,7 @@ body.ie ._ibg img {
 
 .quiz {
   border-radius: 10px;
-  height: 400px;
-  overflow: hidden;
+  height: 100%;
 }
 
 .quiz__question {

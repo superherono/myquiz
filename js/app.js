@@ -45,20 +45,13 @@ if (sliders) {
 function sliders_bild_callback(params) {}
 
 let sliderQuiz = new Swiper('.page__quiz', {
-	// onlyExternal: true,
-	pagination : false, 
-	// simulateTouch : false, 
-	// allowSwipeToNext: false, 
-	// allowSwipeToPrev: false,
-	// preventInteractionOnTransition: true,
-	allowTouchMove: false,
-
-	// observer: true,
-	// observeParents: true,
+	observer: true,
+	observeParents: true,
 	slidesPerView: 1,
-	// // spaceBetween: 80,
-	// // speed: 800,
-	// // touchRatio: 0,
+	spaceBetween: 80,
+	speed: 800,
+	touchRatio: 0,
+	lazy: true,
 	on: {
 		lazyImageReady: function () {
 			ibg();
@@ -99,7 +92,20 @@ function goToNextQuestion() {
 	sliderQuiz.slideNext();
 }
 
-
+function testWebP(callback) {
+	var webP = new Image();
+	webP.onload = webP.onerror = function () {
+		callback(webP.height == 2);
+	};
+	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+testWebP(function (support) {
+	if (support === true) {
+		document.querySelector('html').classList.add('_webp');
+	} else {
+		document.querySelector('html').classList.add('_no-webp');
+	}
+});
 // sliderQuiz.on('reachEnd', function () {
 	
 // 	let quizQuestionsLenght = document.querySelectorAll('.quiz__question').length;
